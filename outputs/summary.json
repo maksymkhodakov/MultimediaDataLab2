@@ -1,0 +1,594 @@
+{
+  "device": "mps",
+  "dataset": {
+    "sizes": {
+      "train": 6000,
+      "validation": 1000,
+      "test": 1000
+    },
+    "unique_words": 7333,
+    "vocab_words": 2529,
+    "vocab_size": 2533,
+    "mean_len": 10.8113,
+    "p95_len": 18,
+    "max_len": 36,
+    "token_coverage": 0.9752851183483947,
+    "top_words": [
+      "a",
+      "in",
+      "the",
+      "on",
+      "is",
+      "and",
+      "dog",
+      "with",
+      "man",
+      "of",
+      "two",
+      "white",
+      "black",
+      "boy",
+      "are",
+      "woman",
+      "girl",
+      "to",
+      "wearing",
+      "at",
+      "people",
+      "water",
+      "brown",
+      "red",
+      "young"
+    ],
+    "truncated_share": 0.0155
+  },
+  "histories": {
+    "A": {
+      "name": "A. Show and Tell (LSTM 512)",
+      "params": 6795749,
+      "train_loss": [
+        4.098810191936755,
+        3.2895618306317433,
+        2.9905909769574803,
+        2.790229745358231,
+        2.641519342733444,
+        2.5190911403187934,
+        2.4117089433444443,
+        2.3215777692166104,
+        2.234293997843439,
+        2.158594872068256,
+        2.0861366315327876,
+        2.0171951789286067
+      ],
+      "val_bleu4": [
+        0.11455058881861559,
+        0.1597950905719535,
+        0.16867039465526176,
+        0.17452605727852838,
+        0.16576416112902984,
+        0.17309373260250394,
+        0.17528797502531124,
+        0.17774035084557727,
+        0.1664888556100713,
+        0.17191842329065865,
+        0.1713168729191806,
+        0.17380596633583312
+      ],
+      "epoch_time": [
+        55.972415924072266,
+        60.10585904121399,
+        54.362298011779785,
+        50.74565100669861,
+        50.28597021102905,
+        50.23884201049805,
+        50.445345878601074,
+        50.0506112575531,
+        50.04328393936157,
+        50.098592042922974,
+        50.318809032440186,
+        50.14107871055603
+      ],
+      "best_epoch": 8,
+      "best_val_bleu4": 0.17774035084557727,
+      "total_time": 625.1098790168762
+    },
+    "B": {
+      "name": "B. Show, Attend and Tell (LSTM 512)",
+      "params": 13352934,
+      "train_loss": [
+        4.017581526868038,
+        3.183980814278846,
+        2.872726034557212,
+        2.658555508471319,
+        2.4897482924681156,
+        2.346721983610193,
+        2.219680002888791,
+        2.1049630042573564,
+        1.9983790778432484,
+        1.9028481533289736,
+        1.8130749616026929,
+        1.726905066650474
+      ],
+      "val_bleu4": [
+        0.14294793826148872,
+        0.18939211837641257,
+        0.19040326986626252,
+        0.18704892204846923,
+        0.18570578381195743,
+        0.1886446041134737,
+        0.19154451217802498,
+        0.20152250118059054,
+        0.19517412890280056,
+        0.20143665224550772,
+        0.19915885755205423,
+        0.19472159389173727
+      ],
+      "epoch_time": [
+        167.20520496368408,
+        166.54501390457153,
+        166.3029661178589,
+        166.79609870910645,
+        166.14801216125488,
+        166.41538405418396,
+        166.73516011238098,
+        169.62496829032898,
+        179.86520195007324,
+        164.09372901916504,
+        155.32351684570312,
+        155.58207297325134
+      ],
+      "best_epoch": 8,
+      "best_val_bleu4": 0.20152250118059054,
+      "total_time": 1994.4264981746674
+    },
+    "C": {
+      "name": "C. Show, Attend and Tell (LSTM 256)",
+      "params": 6088934,
+      "train_loss": [
+        4.461020344808817,
+        3.609759125845223,
+        3.294084608170756,
+        3.088243457630103,
+        2.9349802822296707,
+        2.8085664771262264,
+        2.700238982223177,
+        2.607085384714495,
+        2.521841409235482,
+        2.443006674365099,
+        2.3742630907826956,
+        2.308774629654635
+      ],
+      "val_bleu4": [
+        0.12865390306493496,
+        0.16608179040128082,
+        0.16538432211613632,
+        0.17111865370072002,
+        0.1765893437485707,
+        0.1742713993430526,
+        0.186431340417638,
+        0.19822113170246328,
+        0.18914546314062555,
+        0.19267622098291634,
+        0.18778543391174035,
+        0.19052138517555164
+      ],
+      "epoch_time": [
+        108.41097497940063,
+        108.70292401313782,
+        106.46979188919067,
+        106.32141900062561,
+        107.07634997367859,
+        104.01229310035706,
+        106.15389680862427,
+        102.05564379692078,
+        101.67985486984253,
+        102.13826823234558,
+        102.16667699813843,
+        102.23031234741211
+      ],
+      "best_epoch": 8,
+      "best_val_bleu4": 0.19822113170246328,
+      "total_time": 1259.8487629890442
+    }
+  },
+  "test": {
+    "rows": [
+      {
+        "key": "A",
+        "decoding": "greedy",
+        "BLEU-1": 0.6022109978080625,
+        "BLEU-2": 0.42743378325718256,
+        "BLEU-3": 0.2899360102587806,
+        "BLEU-4": 0.19613971269287842,
+        "time": 0.5898258686065674
+      },
+      {
+        "key": "B",
+        "decoding": "greedy",
+        "BLEU-1": 0.6115583668775159,
+        "BLEU-2": 0.43514780648460555,
+        "BLEU-3": 0.29894800118655257,
+        "BLEU-4": 0.2026209335557734,
+        "time": 1.9974870681762695
+      },
+      {
+        "key": "C",
+        "decoding": "greedy",
+        "BLEU-1": 0.6158409967368733,
+        "BLEU-2": 0.4394755571750575,
+        "BLEU-3": 0.30068933614717863,
+        "BLEU-4": 0.20169600286110917,
+        "time": 1.6209228038787842
+      },
+      {
+        "key": "A",
+        "decoding": "beam k=3",
+        "BLEU-1": 0.6337575778766636,
+        "BLEU-2": 0.4535711737580204,
+        "BLEU-3": 0.31722953056849823,
+        "BLEU-4": 0.21853370290098223,
+        "time": 67.52123188972473
+      },
+      {
+        "key": "B",
+        "decoding": "beam k=3",
+        "BLEU-1": 0.6536179073399271,
+        "BLEU-2": 0.4742482504924208,
+        "BLEU-3": 0.3359439006916661,
+        "BLEU-4": 0.23407621544810603,
+        "time": 94.6700451374054
+      },
+      {
+        "key": "B",
+        "decoding": "beam k=5",
+        "BLEU-1": 0.6458363591594027,
+        "BLEU-2": 0.4708016943736709,
+        "BLEU-3": 0.3362119840286957,
+        "BLEU-4": 0.23476300420125631,
+        "time": 109.80036497116089
+      },
+      {
+        "key": "C",
+        "decoding": "beam k=3",
+        "BLEU-1": 0.6455643481882549,
+        "BLEU-2": 0.4682304722589072,
+        "BLEU-3": 0.33040366024429396,
+        "BLEU-4": 0.23028584244346173,
+        "time": 84.48365521430969
+      }
+    ],
+    "human": {
+      "BLEU-1": 0.637114883679152,
+      "BLEU-2": 0.44665776670287527,
+      "BLEU-3": 0.30641312625360234,
+      "BLEU-4": 0.21035452773745222
+    },
+    "best": "B",
+    "diversity": {
+      "A|greedy": {
+        "unique_words": 286,
+        "unique_sentences": 831,
+        "mean_len": 10.493
+      },
+      "B|greedy": {
+        "unique_words": 367,
+        "unique_sentences": 939,
+        "mean_len": 10.434
+      },
+      "C|greedy": {
+        "unique_words": 231,
+        "unique_sentences": 837,
+        "mean_len": 10.113
+      },
+      "A|beam k=3": {
+        "unique_words": 268,
+        "unique_sentences": 790,
+        "mean_len": 9.659
+      },
+      "B|beam k=3": {
+        "unique_words": 359,
+        "unique_sentences": 888,
+        "mean_len": 9.605
+      },
+      "B|beam k=5": {
+        "unique_words": 354,
+        "unique_sentences": 884,
+        "mean_len": 9.11
+      },
+      "C|beam k=3": {
+        "unique_words": 218,
+        "unique_sentences": 804,
+        "mean_len": 9.604
+      }
+    }
+  },
+  "attention_key": "B",
+  "examples": {
+    "random": [
+      {
+        "index": 654,
+        "model": "a young boy is playing in a yard",
+        "greedy": "a young boy is playing with a brown dog in a yard",
+        "human": [
+          "A boy is kicking up dust as he runs in the dirt by a tree .",
+          "A boy wearing brown running in dirt .",
+          "a dirty boy runs through the dirt .",
+          "A dusty boy runs along a dirt path through the grass .",
+          "A teenage boy runs through the dirt near a house in the country ."
+        ],
+        "bleu4": 0.07386099955930606
+      },
+      {
+        "index": 114,
+        "model": "a little boy is playing in the water",
+        "greedy": "a little boy plays in a playground",
+        "human": [
+          "A child at a water park is sprayed from all sides by a ring of water .",
+          "A child in a pink and black bathing suit walks through water mist from colored rings .",
+          "A young girl stands under three large rings that shoot water in a water park .",
+          "Colorful rings spraying water at little girl wearing swimsuit .",
+          "The little girl in her bathing suit stands near the sprinkers and squeals ."
+        ],
+        "bleu4": 0.03836398229803295
+      },
+      {
+        "index": 25,
+        "model": "a group of people walking down a street",
+        "greedy": "a woman in a red jacket is standing on a sidewalk",
+        "human": [
+          "A busy city street with many people walking along it .",
+          "A couple walk to the side of a crowded walkway .",
+          "Chinese market street in the winter time .",
+          "People walk down a paved street that has red lanterns hung from the buildings .",
+          "People walking down street lined with Chinese lanterns ."
+        ],
+        "bleu4": 0.1880301546543197
+      },
+      {
+        "index": 759,
+        "model": "a little girl in a pink shirt is sitting on a couch",
+        "greedy": "a little girl in a pink dress is playing on a bed",
+        "human": [
+          "An older child watching a toddler play with a long spring inside a house .",
+          "A young child plays with a slinky in the family room while an older sibling watches .",
+          "Two little children and one is playing with a slinky .",
+          "Two young children are playing in the living room with some toys .",
+          "two young children playing in front of a couch"
+        ],
+        "bleu4": 0.04926862021119254
+      },
+      {
+        "index": 281,
+        "model": "a girl in a white dress is jumping on a sand dune",
+        "greedy": "a woman in a white shirt is jumping on a sand dune",
+        "human": [
+          "A blond boy slides down a sand dune on a skateboard with no wheels .",
+          "A blond child runs down a sand dune while another looks on .",
+          "A blonde girl surfing down a sandy hill",
+          "A woman is snowboarding down an incline while another woman stands behind .",
+          "a young person sliding down a sandy hill ."
+        ],
+        "bleu4": 0.119219885465362
+      },
+      {
+        "index": 250,
+        "model": "a black dog jumping in the air",
+        "greedy": "a black dog is running through the sand",
+        "human": [
+          "A black dog is running along a muddy stream surrounded by fall foliage .",
+          "A black dog is running down a path .",
+          "A curly clack dog is running down a natural path .",
+          "Dark colored dog leaping down a path .",
+          "Fuzzy dark gray dog running along a dirt path with weeds on the sides ."
+        ],
+        "bleu4": 0.17567205239427922
+      }
+    ],
+    "good": [
+      {
+        "index": 783,
+        "model": "two children are playing in the water",
+        "greedy": "a woman and two children are playing in the water",
+        "human": [
+          "At least 4 people swim in shallow water that grows deeps towards a bridge .",
+          "Children are playing and swimming in a boy of water with a foot bridge in the background .",
+          "Kids playing in the water in front of a wooden bridge .",
+          "Two children playing in a lake",
+          "Two children playing in a river near a wooden bridge ."
+        ],
+        "bleu4": 0.6223329772884784
+      },
+      {
+        "index": 309,
+        "model": "a surfer is riding a wave",
+        "greedy": "a surfer is riding a wave",
+        "human": [
+          "A person in a black wetsuit is surfing in the ocean with a wave coming down .",
+          "A person is surfing .",
+          "A surfer in all black is riding a wave .",
+          "A surfer rides the waves .",
+          "A woman in a black wetsuit surfs in bad weather ."
+        ],
+        "bleu4": 0.6042750794713536
+      },
+      {
+        "index": 540,
+        "model": "a group of children are playing with a dog",
+        "greedy": "a group of children playing in a field of a small child",
+        "human": [
+          "Children , one with a stick , and six petting a dog with a blue leash .",
+          "A group of children are petting a white dog on the grass .",
+          "A group of children gather around a white dog on the grass outside .",
+          "a group of children playing with a dog",
+          "Group of children surround and pet white dog with blue collar on grass ."
+        ],
+        "bleu4": 0.7476743906106103
+      },
+      {
+        "index": 172,
+        "model": "a man and a woman are sitting on a sidewalk",
+        "greedy": "a man and a woman sit on a street",
+        "human": [
+          "A man and a girl sit on the ground and eat .",
+          "A man and a little girl are sitting on a sidewalk near a blue bag eating .",
+          "A man and young girl eat a meal on a city street .",
+          "A man wearing a black shirt and a girl wearing an orange shirt sitting on the pavement eating .",
+          "A man wearing a black shirt and a little girl wearing an orange dress share a treat ."
+        ],
+        "bleu4": 0.5954165059120786
+      },
+      {
+        "index": 827,
+        "model": "a little boy in a blue shirt is running through a pile of leaves",
+        "greedy": "a boy in a blue shirt is jumping into a pile of leaves",
+        "human": [
+          "A boy kicks through a pile of leaves .",
+          "A boy with blue shirt kicking off dead leaves from a pile of leaves .",
+          "A kid in a blue top leaps into a raked pile of leaves in front of trees .",
+          "A little boy in blue is running through a pile of brown leaves .",
+          "A young boy standing with a raised leg in a large pile of leaves ."
+        ],
+        "bleu4": 0.7272454093000141
+      },
+      {
+        "index": 596,
+        "model": "two dogs swimming in a pool",
+        "greedy": "a black dog swimming in a pool",
+        "human": [
+          "A black dog paddles behind a black cat in a body of water .",
+          "A dog and a cat are swimming in a swimming pool .",
+          "Two black dogs are dog paddling in a sparkling blue pool .",
+          "Two black dogs are swimming in a pool .",
+          "Two dogs swimming in a pool ."
+        ],
+        "bleu4": 1.0
+      }
+    ],
+    "bad": [
+      {
+        "index": 857,
+        "model": "a man is standing on a city street",
+        "greedy": "a man in a <unk> <unk> with a <unk>",
+        "human": [
+          "A group of people are watching fireworks outside .",
+          "A group of people gathered to watch fireworks .",
+          "A small crowd in winter jackets stand in a snow field , looking at fireworks .",
+          "A small crowd stands watching a fireworks display .",
+          "People watch as something lights up the sky ."
+        ],
+        "bleu4": 0.03303164318013808
+      },
+      {
+        "index": 643,
+        "model": "a girl in a blue shirt is holding a <unk> sign",
+        "greedy": "a girl in a white shirt is holding a <unk> sign",
+        "human": [
+          "One girl is wearing a white t-shirt with red sleeves ; the other has words on hers .",
+          "two asian girls laughing together",
+          "Two girls with dark hair and white shirts .",
+          "Two girls with long hair are smiling and one is hold something white and green .",
+          "Two women in white shirts talking ."
+        ],
+        "bleu4": 0.02818780157629645
+      },
+      {
+        "index": 383,
+        "model": "a man in a black shirt is standing next to a man in a black shirt",
+        "greedy": "a man in a black shirt with a man in a black shirt is standing next to a man in a",
+        "human": [
+          "Men wearing sunglasses with their backs turned to the camera .",
+          "The backs of two men wearing backpacks near some tents .",
+          "Two men in black bulletproof vests watch something taking place to the right of the picture .",
+          "Two men in black outfits have backpacks .",
+          "Two men in bullet proof vests watch over a crowd by some white tents ."
+        ],
+        "bleu4": 0.017395797375642234
+      },
+      {
+        "index": 323,
+        "model": "a man in a black jacket is standing next to a man in a black jacket",
+        "greedy": "a man in a black jacket is standing on a street with a sign",
+        "human": [
+          "A dark skinned man plays a blue guitar on the street .",
+          "A man playing his guitar on the street , surrounded by buildings and street lights .",
+          "A man plays a blue guitar on the an empty urban street .",
+          "a man walking the streets while playing the guitar .",
+          "The man plays his guitar on the local streets ."
+        ],
+        "bleu4": 0.02878787818101127
+      },
+      {
+        "index": 65,
+        "model": "a group of people are standing in front of a <unk>",
+        "greedy": "a woman and a woman in a black dress and white shirt is standing in front of a woman",
+        "human": [
+          "Three people stand by a doorway posing for a photograph .",
+          "Two men and a woman pose for a picture .",
+          "Two men and a woman smile at the camera .",
+          "Two men and a woman standing near a doorway .",
+          "Two men and a woman with their arms around each other ."
+        ],
+        "bleu4": 0.026658376817028855
+      },
+      {
+        "index": 810,
+        "model": "a woman in a white dress is standing next to a woman wearing a white hat and hat is standing next",
+        "greedy": "a woman in a dress and a white dress is standing next to a woman in a <unk> hat",
+        "human": [
+          "three females wearing head scarves standing together",
+          "Three Muslim women are looking at a camera .",
+          "Three women in dresses and head scarves outside .",
+          "Three women in head scarves examine a camera .",
+          "Three women with head scarves and long skirts ."
+        ],
+        "bleu4": 0.013659149296955463
+      }
+    ]
+  },
+  "attention": [
+    {
+      "index": 783,
+      "caption": "two children are playing in the water"
+    },
+    {
+      "index": 309,
+      "caption": "a surfer is riding a wave"
+    },
+    {
+      "index": 654,
+      "caption": "a young boy is playing in a yard"
+    }
+  ],
+  "own": [
+    {
+      "file": "dog_beach.jpg",
+      "greedy": "a black dog is running on the sand",
+      "beam": "a black dog is running on the sand",
+      "models": {
+        "A": "a black dog is running in the snow",
+        "B": "a black dog is running on the sand",
+        "C": "a black dog running in the snow"
+      }
+    },
+    {
+      "file": "kids_fountain.jpg",
+      "greedy": "three people are playing in a fountain",
+      "beam": "three people are playing in a fountain",
+      "models": {
+        "A": "three children are playing in the water",
+        "B": "three people are playing in a fountain",
+        "C": "three children are playing in the water"
+      }
+    },
+    {
+      "file": "surfer.jpg",
+      "greedy": "a surfer rides a wave",
+      "beam": "a surfer rides a wave",
+      "models": {
+        "A": "a surfer is riding a wave",
+        "B": "a surfer rides a wave",
+        "C": "a surfer rides a wave"
+      }
+    }
+  ]
+}

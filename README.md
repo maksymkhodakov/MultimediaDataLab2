@@ -22,7 +22,7 @@ Encoder — згорткова мережа ResNet-50 (ImageNet), decoder — LS
 | `src/train.py` | навчання, валідація, збереження найкращої епохи |
 | `src/visualize.py` | графіки, приклади, карти уваги |
 | `own_images/` | власні зображення для пункту 4 |
-| `outputs/` | результати: `summary.json`, історії навчання, `figures/`, журнал `run_log.txt` |
+| `outputs/` | результати: `summary.json`, історії навчання, `figures/`, журнали `train_log.txt` (навчання) та `eval_log.txt` (повторне оцінювання) |
 
 ### Запуск
 

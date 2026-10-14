@@ -71,20 +71,20 @@ def plot_training_curves(histories: dict):
 
 
 def plot_captioned_grid(images, model_caps, human_caps, name: str, extra=None):
-    """Сітка 2×3: зображення з підписом моделі та одним людським підписом."""
-    cols = 3
+    """Сітка 3×2: зображення з підписом моделі та одним людським підписом."""
+    cols = 2
     rows = (len(images) + cols - 1) // cols
-    fig, axes = plt.subplots(rows, cols, figsize=(6 * cols, 5.2 * rows))
+    fig, axes = plt.subplots(rows, cols, figsize=(6.5 * cols, 5.6 * rows))
     for i, ax in enumerate(np.array(axes).flat):
         ax.axis("off")
         if i >= len(images):
             continue
-        ax.imshow(images[i])
-        title = f"модель: {_wrap(model_caps[i])}\nлюдина: {_wrap(human_caps[i])}"
+        ax.imshow(ImageOps.fit(images[i], (500, 375)))  # однаковий розмір 4:3 для всіх кадрів
+        title = f"модель: {_wrap(model_caps[i], 44)}\nлюдина: {_wrap(human_caps[i], 44)}"
         if extra:
             title += f"\n{extra[i]}"
-        ax.set_title(title, fontsize=10)
-    fig.tight_layout()
+        ax.set_title(title, fontsize=12.5)
+    fig.tight_layout(h_pad=3.0)  # додатковий відступ, щоб довгі заголовки не наїжджали на фото
     return _save(fig, name)
 
 
